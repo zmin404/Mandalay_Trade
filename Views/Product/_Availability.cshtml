@@ -1,0 +1,46 @@
+﻿@model ProductDetailsModel
+@using Nop.Services.Localization
+
+@inject ILocalizationService localizationService
+@if (!string.IsNullOrWhiteSpace(Model.StockAvailability) || Model.DisplayBackInStockSubscription)
+{
+    <div class="availability">
+        @if (!string.IsNullOrWhiteSpace(Model.StockAvailability))
+        {
+            bool outOfStock = string.Equals(localizationService.GetResource("products.availability.outofstock"), Model.StockAvailability, StringComparison.InvariantCulture);
+
+
+            <style>
+                .outofstock {
+                    font: normal 15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+                    color: red;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+                .stockavailable {
+                    font: normal 15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+                    color: green;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            </style>
+            if (outOfStock)
+            {
+                <div class="stock">
+                    <span class="label">@T("Products.Availability"):</span>
+                    <span class="outofstock" id="stock-availability-value-@Model.Id">@Model.StockAvailability</span>
+                </div>
+            }
+            else
+            {
+                <div class="stock">
+                    <span class="label">@T("Products.Availability"):</span>
+                    <span class="stockavailable" id="stock-availability-value-@Model.Id">@Model.StockAvailability</span>
+                </div>
+            }
+
+        }
+        @await Html.PartialAsync("_BackInStockSubscription", Model)
+    </div>
+}

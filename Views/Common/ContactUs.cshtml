@@ -1,0 +1,123 @@
+﻿@model ContactUsModel
+@{
+    Layout = "_ColumnsOne";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.ContactUs").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-contact-page");
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div class="page contact-page">
+    <div class="page-title">
+		<iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.981313171258!2d96.08466871542865!3d21.9736802602231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d31f1973787%3A0x17e9e9c58d591fec!2sPAHG%20Holding%20Co.%2Cltd!5e0!3m2!1sen!2smm!4v1653368761015!5m2!1sen!2smm" width="100%" height="600" allowfullscreen="allowfullscreen"></iframe>
+        <br/>
+		<br/>
+		<br/>
+		<h1>@T("PageTitle.ContactUs")</h1>
+    </div>
+	
+    <div class="page-body">
+		<br/>
+		<div class="container-fluid">
+		  <div class="row">
+			<div class="col-sm-4" style="text-align: center;">
+				<p> 
+					<i class="fa fa-map-marker"></i>
+					<strong>Address:</strong>
+				</p>
+				<p>
+					Corner of 78th Street and 32nd Street, 
+				</p>
+				<p>
+					Chanayetharzan Township, 
+				</p>
+				<p>
+					Mandalay, Myanmar.
+				</p>
+			</div>
+			<div class="col-sm-4" style="text-align: center;">
+				<p> 
+					<i class="fa fa-envelope"></i>
+					<strong>Email:</strong>
+				</p>
+				<p>
+					mandalaytrade.com@gmail.com
+				</p>
+			</div>
+			<div class="col-sm-4" style="text-align: center;">
+				<p> 
+					<i class="fa fa-phone"></i>
+					<strong>Hotline:</strong>
+				</p>
+				<p>
+					+95 9 794082936
+				</p>
+			</div>
+		  </div>
+		</div>
+        @await Component.InvokeAsync("TopicBlock", new { systemName = "ContactUs" })
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContactUsTop })
+        @if (Model.SuccessfullySent)
+        {
+            <div class="result">
+                @Model.Result
+            </div>
+        }
+        else
+        {
+		<br/>
+		<br/>
+		<br/>
+            <form asp-route="ContactUs" method="post">
+                <div asp-validation-summary="ModelOnly" class="message-error"></div>
+                <div class="fieldset">
+                    <div class="form-fields">
+                        <div class="inputs">
+                            <label asp-for="FullName" asp-postfix=":">Name </label>
+                            <input asp-for="FullName" placeholder="@T("ContactUs.FullName.Hint")" class="fullname" />
+                            <nop-required />
+                            <span asp-validation-for="FullName"></span>
+                        </div>
+                        <div class="inputs">
+                            <label asp-for="Email" asp-postfix=":">Email </label>
+                            <input asp-for="Email" placeholder="@T("ContactUs.Email.Hint")" class="email" />
+                            <nop-required />
+                            <span asp-validation-for="Email"></span>
+                        </div>
+                        @if (Model.SubjectEnabled)
+                        {
+                            <div class="inputs">
+                                <label asp-for="Subject" asp-postfix=":"></label>
+                                <input asp-for="Subject" placeholder="@T("ContactUs.Subject.Hint")" class="subject" />
+                                <nop-required />
+                                <span asp-validation-for="Subject"></span>
+                            </div>
+                        }
+                        <div class="inputs">
+                            <label asp-for="Enquiry" asp-postfix=":">Message </label>
+                            
+							<textarea asp-for="Enquiry" placeholder="Write your message here ..." class="enquiry"></textarea>
+                            <nop-required />
+                            <span asp-validation-for="Enquiry"></span>
+                        </div>
+                        @if (Model.DisplayCaptcha)
+                        {
+                            <div class="captcha-box">
+                                <nop-captcha />
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="buttons">
+                    <input type="submit" name="send-email" class="button-1 contact-us-button" value="@T("ContactUs.Button")" />
+                </div>
+            </form>
+        }
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContactUsBottom })
+    </div>
+</div>

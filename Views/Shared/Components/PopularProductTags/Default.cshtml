@@ -1,0 +1,76 @@
+﻿@model PopularProductTagsModel
+@if (Model.Tags.Count > 0)
+{
+<div class="block block-popular-tags">
+    <div class="title">
+        @*<strong>@T("Products.Tags.Popular")</strong>*@
+        <strong>Available Payment</strong>
+    </div>
+    @*<div class="listbox">
+            <div class="tags">
+                <ul>
+                    @foreach (var item in Model.Tags)
+                    {
+                        <li><a href="@Url.RouteUrl("ProductsByTag", new { item.SeName })" style="font-size:@(Model.GetFontSize(item))%;">@item.Name</a></li>
+                    }
+                </ul>
+            </div>
+            @if (Model.TotalTags > Model.Tags.Count)
+            {
+                <div class="view-all">
+                    <a href="@Url.RouteUrl("ProductTagsAll")">@T("Products.Tags.Popular.ViewAll")</a>
+                </div>
+            }
+        </div>*@
+    <div class="listbox">
+        <ul class="list">
+            <li>
+                <a class="custom-picture" href="/kbz-bank-payment">
+                    <img src="~/images/KBZ.png" />
+                </a>
+                <a class="product-name" href="/kbz-bank-payment">KBZ Bank</a>
+            </li>
+			 <li>
+                <a class="custom-picture" href="/kbz-pay-bank-payment">
+                    <img src="~/images/KBZPay.png" />
+                </a>
+                <a class="product-name" href="/kbz-pay-bank-payment">KBZ Pay</a>
+            </li>
+            <li>
+                <a class="custom-picture" href="/mab-payment">
+                    <img src="~/images/MAB.png" />
+                </a>
+                <a class="product-name" href="/mab-bank-payment">MAB Bank</a>
+            </li>
+            <li>
+                <a class="custom-picture" href="/aya-bank-payment">
+                    <img src="~/images/AYA.png" />
+                </a>
+                <a class="product-name" href="/aya-bank-payment">AYA Bank</a>
+            </li>
+            <li>
+                <a class="custom-picture" href="/yoma-bank-payment">
+                    <img src="~/images/Yoma.png" />
+                </a>
+                <a class="product-name" href="/yoma-bank-payment">YOMA Bank</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="block block-popular-tags">
+    <div class="title">
+        <strong>Delivery Information</strong>
+    </div>
+    <div class="listbox">
+        <ul class="list">
+            <li>
+                <a class="custom-picture" href="/delivery-information">
+                    <img src="~/images/delivery.png" />
+                </a>
+                <a class="product-name" href="/delivery-information">Delivery Information</a>
+            </li>
+			 
+        </ul>
+    </div>
+</div>
+}

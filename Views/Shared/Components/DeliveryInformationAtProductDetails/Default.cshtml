@@ -1,0 +1,122 @@
+﻿@model PopularProductTagsModel
+<style>
+    #more {
+        display: none;
+    }
+
+    ul.zm {
+        list-style: inherit !important;
+        padding-left: 40px
+    }
+	.button {
+	  display: inline-block;
+	  width:100px; 
+	  height:30px; 
+	  font-weight:bold; 
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  outline: none;
+	  color: #fff;
+	  background-color: #f58024;
+	  border: none;
+	  border-radius: 15px;
+	  
+	  
+	}
+	.button:hover {background-color: #8c4b18}
+</style>
+
+<br />
+<div>
+    <br />
+    <div class="title">
+        <strong><span style="font-size: 15pt;">Delivery Information</span></strong>
+        <br />
+    </div>
+    <div>
+        <ul class="zm">
+            <li>မှာယူထားသော ပစ္စည်းများကို Customer ဘက်မှ ကျသင့်ငွေပေးချေပြီး ( ရုံးဖွင့်ရက်များအတွင်း ၁ ပတ် ) အတွင်း ပို့ဆောင်ပေးပါသည်။</li>
+            <li>မန္တလေးမြို့တွင်း သတ်မှတ် ဧရိယာများကို အောက်ဖော်ြပပါပစ္စည်းများမှအပ ငွေကျပ် ၃၀၀၀ ကျပ်ဖြင့်ပို့ဆောင်ပေးပါသည်။</li>
+            <li>ဝယ်ယူထားသောပစ္စည်းများကို တပ်ဆင်ခြင်းနှင့်ပတ်သက်သော  စသည့် Service များအတွက် Installation service fee သီးသန့်ရှိပါသည်။<span id="dots">...</span></li>
+        </ul>
+        <span id="more">
+            <br />
+            <br />
+            <p><strong><span style="font-size: 14pt;">ဆောက်လုပ်ရေးလုပ်ငန်းသုံးပစ္စည်းများ</span></strong></p>
+            <br />
+            <p><strong><span style="font-size: 12pt;">ဘိလပ်မြေ</span></strong></p>
+            <ul class="zm">
+                <li>အိတ်အရေအတွက် (၅၀) အိတ်နှင့်အထက် ဝယ်ယူလျှင် ပို့ဆောင်ခ အခမဲ့ဖြင့် မန္တလေးမြို့တွင်း သက်မှတ်ဧရိယာအတွင်း အိမ်အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+                <li>အခြားမြို့၊ နယ်များမှ ဝယ်ယူပါက နီးစပ်ရာကားဂိတ်သို့ ပို့ဆောင်ခ အခမဲ့ဖြင့် အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+            </ul>
+            <br />
+            <p><span style="font-size: 12pt;"><strong>အထပ်သား</strong></span></p>
+            <ul class="zm">
+                <li>အချပ်ရေ (၅၀)ချပ်နှင့်အထက် ဝယ်ယူလျှင် ပို့ဆောင်ခ အခမဲ့ဖြင့် မန္တလေးမြို့တွင်း သက်မှတ်ဧရိယာအတွင်း အိမ်အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+                <li>အခြားမြို့၊ နယ်များမှ ဝယ်ယူပါက နီးစပ်ရာကားဂိတ်သို့ ပို့ဆောင်ခ အခမဲ့ဖြင့် အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+            </ul>
+            <br />
+            <p><strong><span style="font-size: 12pt;">အုတ်</span></strong></p>
+            <ul class="zm">
+                <li>အချပ်ရေ (၅၀၀၀ ကားတစ်စီးစာ) ချပ်နှင့်အထက် ဝယ်ယူလျှင် ပို့ဆောင်ခ အခမဲ့ဖြင့် မန္တလေးမြို့တွင်း သက်မှတ်ဧရိယာအတွင်း အိမ်အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+                <li>အခြားမြို့၊ နယ်များမှ ဝယ်ယူပါက နီးစပ်ရာကားဂိတ်သို့ ပို့ဆောင်ခ အခမဲ့ဖြင့် အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+            </ul>
+            <br />
+            <p><strong><span style="font-size: 12pt;">သံ</span></strong></p>
+            <ul class="zm">
+                <li>အလေးချိန် (၃) တန်နှင့်အထက် ဝယ်ယူလျှင် ပို့ဆောင်ခ အခမဲ့ဖြင့် မန္တလေးမြို့တွင်း သက်မှတ်ဧရိယာအတွင်း အိမ်အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+                <li>အခြားမြို့၊ နယ်များမှ ဝယ်ယူပါက နီးစပ်ရာကားဂိတ်သို့ ပို့ဆောင်ခ အခမဲ့ဖြင့် အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+                <li>ကျောက်နှင့် သဲ ကို ပို့ဆောင်ခ အခမဲ့ဖြင့် မန္တလေးမြို့တွင်း သက်မှတ်ဧရိယာအတွင်း အိမ်အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+            </ul>
+            <br />
+            <br />
+            <p><strong><span style="font-size: 14pt;">အိမ်တွင်း အလှဆင် ပစ္စည်းများ</span></strong></p>
+            <br />
+            <p><strong><span style="font-size: 12pt;">ဖန်ဘလောက်တုံး</span></strong></p>
+            <ul class="zm">
+                <li>ဖာ (30) (တစ်ဖာလျှင် ဘလောက်တုံး (၆)ခု) နှင့်အထက် ဝယ်ယူလျှင် ပို့ဆောင်ခအခမဲ့ဖြင့် မန္တလေးမြို့တွင်း သက်မှတ်ဧရိယာအတွင်း အိမ်အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+                <li>အခြားမြို့၊ နယ်များမှ ဝယ်ယူပါက နီးစပ်ရာကားဂိတ်သို့ ပို့ဆောင်ခ အခမဲ့ဖြင့် အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+            </ul>
+            <br />
+            <p><strong><span style="font-size: 12pt;">အချောကိုင်ပေါင်ဒါမှုန့်</span></strong></p>
+            <ul class="zm">
+                <li>အိတ်အရေအတွက် (၂၀) အိတ်နှင့်အထက် ဝယ်ယူလျှင် ပို့ဆောင်ခ အခမဲ့ဖြင့် မန္တလေးမြို့တွင်း သက်မှတ်ဧရိယာအတွင်း အိမ်အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+                <li>အခြားမြို့၊ နယ်များမှ ဝယ်ယူပါက နီးစပ်ရာကားဂိတ်သို့ ပို့ဆောင်ခ အခမဲ့ဖြင့် အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+            </ul>
+            <br />
+            <p><strong><span style="font-size: 12pt;">မျက်နှာကြက်ဘုတ်ပြား</span></strong></p>
+            <ul class="zm">
+                <li>အချပ်ရေ (၅၀) ) ချပ်နှင့်အထက် ဝယ်ယူလျှင် ပို့ဆောင်ခ အခမဲ့ဖြင့် မန္တလေးမြို့တွင်း သက်မှတ်ဧရိယာအတွင်း အိမ်အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+                <li>အခြားမြို့၊ နယ်များမှ ဝယ်ယူပါက နီးစပ်ရာကားဂိတ်သို့ ပို့ဆောင်ခ အခမဲ့ဖြင့် အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+            </ul>
+            <br />
+            <p><strong><span style="font-size: 12pt;">ကြွေပြား</span></strong></p>
+            <ul class="zm">
+                <li>၁၀ပေပတ်လည် (၃)ကျင်းနှင့်အထက် ဝယ်ယူလျှင် ပို့ဆောင်ခ အခမဲ့ဖြင့် မန္တလေးမြို့တွင်း သက်မှတ်ဧရိယာအတွင်း အိမ်အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+                <li>အခြားမြို့၊ နယ်များမှ ဝယ်ယူပါက နီးစပ်ရာကားဂိတ်သို့ ပို့ဆောင်ခ အခမဲ့ဖြင့် အရောက်ပို့ဆောင်ပေးပါသည်။</li>
+            </ul>
+        </span>
+        <br />
+        <button class="button" type="button" onclick="myFunction()" id="myBtn">Read more</button>
+    </div>
+
+
+</div>
+<script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>

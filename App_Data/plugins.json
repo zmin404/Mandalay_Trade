@@ -1,0 +1,25 @@
+﻿{
+  "InstalledPluginNames": [
+    "Widgets.StoreLocator",
+    "Resanehlab.Core",
+    "DiscountRequirement.HasAllProducts",
+    "FoxNetSoft.Plugin.Misc.Stickers",
+    "Payments.CashOnDelivery",
+    "Payments.Manual",
+    "Payments.PayPalStandard",
+    "Payments.PurchaseOrder",
+    "Shipping.FixedByWeightByTotal",
+    "Widgets.GoogleAnalytics",
+    "Widgets.NivoSlider",
+    "FoxNetSoft.SocialWidget",
+    "ExternalAuth.Facebook",
+    "SevenSpikes.Core",
+    "SevenSpikes.Nop.Plugins.JCarousel",
+    "FoxNetSoft.PriceManager",
+    "SevenSpikes.Nop.Plugins.CloudZoom",
+    "Widgets.nopplustawkchat"
+  ],
+  "PluginNamesToUninstall": [],
+  "PluginNamesToDelete": [],
+  "PluginNamesToInstall": []
+}

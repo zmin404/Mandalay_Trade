@@ -1,0 +1,54 @@
+﻿@model PopularProductTagsModel
+@if (Model.Tags.Count > 0)
+{
+    <div class="block block-popular-tags">
+        <div class="title">
+            <strong>Available Payment</strong>
+        </div>
+       
+        <div class="listbox">
+            <ul class="list">
+				<li>
+                    <a class="custom-picture" href="/aya-bank-payment">
+                        <img src="~/images/AYA.png" />
+                    </a>
+                    <a class="product-name" href="/aya-bank-payment">AYA Bank</a>
+                </li>
+				<li>
+                    <a class="custom-picture" href="/cb-bank">
+                        <img src="~/images/CB.png" />
+                    </a>
+                    <a class="product-name" href="/cb-bank">CB Bank</a>
+                </li>
+			
+			
+                <li>
+                    <a class="custom-picture" href="/kbz-bank-payment">
+                        <img src="~/images/KBZ.png" />
+                    </a>
+                    <a class="product-name" href="/kbz-bank-payment">KBZ Bank</a>
+                </li>
+                <li>
+                    <a class="custom-picture" href="/kbz-pay-bank-payment">
+                        <img src="~/images/KBZPay.png" />
+                    </a>
+                    <a class="product-name" href="/kbz-pay-bank-payment">KBZ Pay</a>
+                </li>
+                <li>
+                    <a class="custom-picture" href="/mab-payment">
+                        <img src="~/images/MAB.png" />
+                    </a>
+                    <a class="product-name" href="/mab-bank-payment">MAB Bank</a>
+                </li>
+                
+                <li>
+                    <a class="custom-picture" href="/yoma-bank-payment">
+                        <img src="~/images/Yoma.png" />
+                    </a>
+                    <a class="product-name" href="/yoma-bank-payment">YOMA Bank</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+}
